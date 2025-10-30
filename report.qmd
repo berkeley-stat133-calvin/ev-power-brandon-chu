@@ -8,17 +8,21 @@ format: typst
 ## **Part 0: libraries**
 
 ```{r}
-
+library(tidyverse)
+library(readr)
+library(stringr)
+library(lubridate)
 ```
 
 ## **Part 1:** **Defining Research Question**
 
-Chosen Question:
+Chosen Question: Do states with higher shares of renewable energy in their electricity mix have higher rates of electric vehicle (EV) adoption in 2023?
 
 ## **Part 2: Data Preparation and Cleaning**
 
 ```{r}
-
+str_detect(energy_sources, "Wind|Hydro")
+energy_sources[str_detect(energy_sources, "Wind|Hydro")]
 ```
 
 ## **Part 3: Joining / Pivoting Datasets for Analysis**
